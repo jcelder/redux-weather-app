@@ -2,12 +2,12 @@ const Dotenv = require('dotenv-webpack')
 
 module.exports = {
   entry: [
-    './src/index.jsx'
+    './src/index.jsx',
   ],
   output: {
     path: __dirname,
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   plugins: [
     new Dotenv(),
@@ -17,15 +17,15 @@ module.exports = {
       exclude: /node_modules/,
       loader: 'babel',
       query: {
-        presets: ['react', 'env' ]
-      }
-    }]
+        presets: ['react', 'env'],
+      },
+    }],
   },
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
-  }
+    contentBase: './',
+  },
 };
